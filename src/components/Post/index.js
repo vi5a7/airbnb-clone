@@ -10,7 +10,7 @@ const Post = (props) => {
         <View style={styles.container}>
             <Image
                 style={styles.image}
-                source={{uri: 'https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'}}
+                source={{uri: post.image}}
             />
             <Text style={styles.bedrooms}>{post.bed} bed - {post.bedroom} bedroom</Text>
             <Text style={styles.description} numberOfLines={2}>
