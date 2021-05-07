@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
 
     prices: {
         fontSize: 18,
+        marginTop: 10,
     },
 
     oldPrice: {
@@ -38,7 +39,8 @@ const styles = StyleSheet.create({
 
     totalPrice: {
         color: '#5b5b5b',
-        textDecorationLine: 'underline'
+        textDecorationLine: 'underline',
+        marginTop: 5
     },
 })
 
