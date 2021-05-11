@@ -33,6 +33,22 @@ const styles = StyleSheet.create({
     plusnminus:{
         color: '#5d5d5d',
         fontSize: 20,
+    },
+
+    searchBar:{
+        marginBottom: 20,
+        backgroundColor: '#f15454',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 50,
+        marginHorizontal : 20,
+        borderRadius: 10 
+    },
+
+    searchButton: {
+        fontSize: 20,
+        color: 'white',
+        fontWeight: 'bold'
     }
 })
 
