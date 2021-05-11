@@ -3,11 +3,14 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         margin: 20,
+        height: '100%',
+        backgroundColor: 'white'
     },
 
     textInput: {
         fontSize: 20,
         marginBottom: 20,
+        marginTop: 20, 
     },
 
     iconContainer: {
@@ -22,7 +25,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginVertical: 10,
-        borderBottomWidth: 1,
         borderColor: 'lightgrey'
     },
 
