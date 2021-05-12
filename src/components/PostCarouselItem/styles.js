@@ -3,7 +3,16 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         height: 120,
-        padding: 5
+        padding: 5,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     },
 
     innerContainer:{
@@ -17,7 +26,6 @@ const styles = StyleSheet.create({
         height: '100%',
         aspectRatio: 1,
         resizeMode: 'cover',
-        borderRadius: 10,
     },
 
     bedrooms: {
@@ -26,12 +34,11 @@ const styles = StyleSheet.create({
     },
 
     description: {
-        fontSize: 18,
-        lineHeight: 25,
+        fontSize: 15,
     },
 
     prices: {
-        fontSize: 18,
+        fontSize: 15,
         marginTop: 10,
     },
 

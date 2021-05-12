@@ -9,7 +9,7 @@ const PostCarouselItem = (props) => {
 
     return (  
         <View style={styles.container}>
-            <View style={[styles.innerContainer, {width: width - 60}]}>
+            <View style={[styles.innerContainer, {width: width - 250}]}>
                 <Image
                     style={styles.image}
                     source={{uri: post.image}}
