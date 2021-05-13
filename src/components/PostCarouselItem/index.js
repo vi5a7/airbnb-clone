@@ -5,11 +5,11 @@ import styles from './styles'
 const PostCarouselItem = (props) => {
 
     const post = props.post
-    const width = useWindowDimensions().width
+    const widthh = useWindowDimensions().width
 
     return (  
         <View style={styles.container}>
-            <View style={[styles.innerContainer, {width: width - 250}]}>
+            <View style={[styles.innerContainer, {width: widthh - 60}]}>
                 <Image
                     style={styles.image}
                     source={{uri: post.image}}
