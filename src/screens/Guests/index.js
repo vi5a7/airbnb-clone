@@ -96,7 +96,10 @@ const GuestsScreen = () => {
                     onPress={() => navigation.navigate('Home',{
                         screen: 'Explore',
                         params:  {
-                            screen: 'Search Results'
+                            screen: 'Search Results',
+                            params: {
+                                guests: adults + childrens
+                            }
                         }
                     })}>
                     <Text style={styles.searchButton}>Search</Text>

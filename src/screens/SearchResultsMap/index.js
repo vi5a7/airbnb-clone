@@ -16,7 +16,13 @@ const SearchResultsMap = () => {
         const fetchPosts = async () => {
             try{
                 const postsResult = await API.graphql(
-                    graphqlOperation(listPosts)
+                    graphqlOperation(listPosts, {
+                        filter: {
+                            maxGuests: {
+                                ge: guests
+                            }
+                        }
+                    })
                 )
                 setPosts(postsResult.data.listPosts.items)
             }catch(e){
