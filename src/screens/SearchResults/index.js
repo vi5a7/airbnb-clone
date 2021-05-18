@@ -9,29 +9,7 @@ import {listPosts} from '../../graphql/queries'
 
 const SearchResultsScreen = (props) => {
 
-    const {guests} = props
-    
-    const [posts, setPosts] = useState([])
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-            try{
-                const postsResult = await API.graphql(
-                    graphqlOperation(listPosts, {
-                        filter: {
-                            maxGuests: {
-                                ge: guests
-                            }
-                        }
-                    })
-                )
-                setPosts(postsResult.data.listPosts.items)
-            }catch(e){
-                console.log('ERROR')
-            }
-        }
-        fetchPosts()
-    }, [])
+    const {posts} = props
 
     return (  
         <View>

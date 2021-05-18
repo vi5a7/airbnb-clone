@@ -8,29 +8,9 @@ import {listPosts} from '../../graphql/queries'
 import CustomMarker from '../../components/CustomMarker';
 import PostCarouselItem from '../../components/PostCarouselItem'
 
-const SearchResultsMap = () => {
+const SearchResultsMap = (props) => {
 
-    const [posts, setPosts] = useState([])
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-            try{
-                const postsResult = await API.graphql(
-                    graphqlOperation(listPosts, {
-                        filter: {
-                            maxGuests: {
-                                ge: guests
-                            }
-                        }
-                    })
-                )
-                setPosts(postsResult.data.listPosts.items)
-            }catch(e){
-                console.log('ERROR')
-            }
-        }
-        fetchPosts()
-    }, [])
+    const {posts} = props
 
     const [selectedPlaceId, setSelectedPlaceId] = useState()
     const width = useWindowDimensions().width
@@ -55,8 +35,8 @@ const SearchResultsMap = () => {
         const region = {
             latitude: selectedPlace.latitude,
             longitude: selectedPlace.longitude,
-            latitudeData: 0.01,
-            longitudeDelta: 0.01
+            latitudeData: 0.8,
+            longitudeDelta: 0.8
         }
         map.current.animateToRegion(region)
     }, [selectedPlaceId])
@@ -67,10 +47,10 @@ const SearchResultsMap = () => {
                 ref={map}
                 style={{width: '100%', height: '100%'}}
                 initialRegion={{
-                    latitude: 11.585230, 
-                    longitude: 104.866203,
-                    latitudeDelta: 0.0922,
-                    longitudeDelta: 0.0421,
+                    latitude: 28.3279822,
+                    longitude: -16.5124847,
+                    latitudeDelta: 0.8,
+                    longitudeDelta: 0.8,
                 }}
             >
                 {posts.map(post => (
